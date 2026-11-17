@@ -33,7 +33,7 @@
     "puppeteer-core": "^25.18.0",
     "typescript": "7.0.2",
     "vitest": "^3.2.0",
-    "web-ext": "^8.0.0"
+    "web-ext": "^10.8.0"
   },
   "packageManager": "npm@11.19.0"
 }
