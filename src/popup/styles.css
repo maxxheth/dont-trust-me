@@ -1,0 +1,9 @@
+@import '../ui/theme.css';
+body { width: 360px; }
+.popup { padding: 12px 14px; }
+.top { display: flex; gap: 12px; align-items: center; margin-bottom: 8px; }
+.host { font-weight: 700; overflow-wrap: anywhere; }
+.summary { margin: 0; font-size: 13px; }
+.row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin: 12px 0; }
+.popup footer { border-top: 1px solid var(--border); padding-top: 8px; margin-top: 8px; font-size: 12px; display: flex; justify-content: space-between; gap: 8px; }
+.err { color: var(--danger); }

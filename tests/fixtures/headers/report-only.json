@@ -1,0 +1,47 @@
+{
+  "input": {
+    "url": "https://example.com/",
+    "statusCode": 200,
+    "headers": [
+      {
+        "name": "Content-Type",
+        "value": "text/html; charset=utf-8"
+      },
+      {
+        "name": "Strict-Transport-Security",
+        "value": "max-age=63072000; includeSubDomains; preload"
+      },
+      {
+        "name": "X-Content-Type-Options",
+        "value": "nosniff"
+      },
+      {
+        "name": "Referrer-Policy",
+        "value": "strict-origin-when-cross-origin"
+      },
+      {
+        "name": "Permissions-Policy",
+        "value": "camera=(), microphone=(), geolocation=()"
+      },
+      {
+        "name": "Cross-Origin-Opener-Policy",
+        "value": "same-origin"
+      },
+      {
+        "name": "Content-Security-Policy-Report-Only",
+        "value": "script-src 'nonce-r4nd0m123' 'strict-dynamic'; object-src 'none'; base-uri 'none'; connect-src 'self'; frame-src 'none'; img-src 'self'; form-action 'self'; frame-ancestors 'none'; report-to csp-endpoint"
+      }
+    ]
+  },
+  "expect": {
+    "verdict": "not-secure",
+    "grade": "F",
+    "hasFindings": [
+      "C1",
+      "I1"
+    ],
+    "lacksFindings": [
+      "B1"
+    ]
+  }
+}

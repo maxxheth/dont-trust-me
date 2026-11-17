@@ -1,0 +1,39 @@
+{
+  "private": true,
+  "name": "dont-trust-me",
+  "description": "Zero-trust security-header extension: treats sites without a script-governing Content-Security-Policy as Not Secure.",
+  "version": "0.1.0",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "extension dev --no-telemetry",
+    "dev:firefox": "extension dev --browser=firefox --no-telemetry",
+    "build": "extension build --browser=chrome,firefox --no-telemetry",
+    "build:chrome": "extension build --browser=chrome --no-telemetry",
+    "build:firefox": "extension build --browser=firefox --no-telemetry",
+    "package": "extension build --browser=chrome,firefox --zip --no-telemetry",
+    "typecheck": "tsc --noEmit -p .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "e2e": "playwright test",
+    "e2e:firefox": "npm run build:firefox && node e2e/firefox/run.ts",
+    "lint:firefox": "web-ext lint --source-dir dist/firefox"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.0",
+    "@types/chrome": "^0.0.287",
+    "@types/node": "^24.0.0",
+    "@types/react": "^18.2.64",
+    "@types/react-dom": "^18.2.21",
+    "extension": "4.1.41",
+    "puppeteer-core": "^25.18.0",
+    "typescript": "7.0.2",
+    "vitest": "^3.2.0",
+    "web-ext": "^8.0.0"
+  },
+  "packageManager": "npm@11.19.0"
+}

@@ -1,0 +1,19 @@
+{
+  "input": {
+    "url": "https://example.com/",
+    "statusCode": 200,
+    "headers": [
+      {
+        "name": "Content-Type",
+        "value": "text/html; charset=utf-8"
+      }
+    ]
+  },
+  "expect": {
+    "verdict": "not-secure",
+    "grade": "F",
+    "hasFindings": [
+      "C1"
+    ]
+  }
+}
